@@ -1,0 +1,111 @@
+/* ============================================
+   8SEC Custom Overrides
+   Safe to load after main.css
+   ============================================ */
+
+/* Brand palette */
+:root {
+  --8sec-dark: #0d1117;
+  --8sec-mid: #1b2838;
+  --8sec-accent: #00d9a6;
+  --8sec-accent-light: #38f0b7;
+  --8sec-text: #e6e6e6;
+  --8sec-muted: #9ca3af;
+  --8sec-card-bg: #161b22;
+}
+
+/* General body tweaks */
+body {
+  background-color: var(--8sec-dark);
+  color: var(--8sec-text);
+  font-family: "Inter", "Segoe UI", sans-serif;
+}
+
+/* Links and buttons */
+a {
+  color: var(--8sec-accent);
+  transition: color 0.2s ease;
+}
+a:hover {
+  color: var(--8sec-accent-light);
+}
+
+/* Buttons (override Twitch purple) */
+.btn {
+  background-color: var(--8sec-accent);
+  border: none;
+  color: #000;
+  font-weight: 600;
+}
+.btn:hover {
+  background-color: var(--8sec-accent-light);
+  color: #000;
+}
+.btn.secondary {
+  background-color: transparent;
+  border: 1px solid var(--8sec-accent);
+  color: var(--8sec-accent);
+}
+.btn.secondary:hover {
+  background-color: var(--8sec-accent);
+  color: #000;
+}
+
+/* Nav bar */
+.nav__container {
+  background-color: var(--8sec-mid);
+  border-bottom: 1px solid #222;
+}
+.nav__logo a {
+  color: var(--8sec-accent);
+}
+.nav__links a {
+  color: var(--8sec-text);
+}
+.nav__links a:hover {
+  color: var(--8sec-accent);
+}
+
+/* Hero section */
+.hero.main {
+  background: radial-gradient(circle at top left, var(--8sec-mid) 0%, var(--8sec-dark) 70%);
+}
+.hero h1,
+.hero h3 {
+  color: var(--8sec-text);
+}
+
+/* Tabs */
+.sandbox-tab.active {
+  color: var(--8sec-accent);
+  border-bottom: 2px solid var(--8sec-accent);
+}
+
+/* Cards / content boxes */
+.story.border,
+.tabcontent,
+.sock {
+  background: var(--8sec-card-bg);
+  border-radius: 12px;
+  border: 1px solid #222;
+}
+
+/* Footer */
+.footer {
+  background-color: var(--8sec-mid);
+  color: var(--8sec-muted);
+}
+.footer a {
+  color: var(--8sec-accent);
+}
+.footer a:hover {
+  color: var(--8sec-accent-light);
+}
+.footer__bottom {
+  border-top: 1px solid #222;
+}
+
+/* Subtle animations */
+.btn, .sandbox-tab, .nav__links a {
+  transition: all 0.2s ease-in-out;
+}

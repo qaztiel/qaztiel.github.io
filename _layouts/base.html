@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+  <head data-proofer-ignore>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ page.title | default: site.title }}</title>
+
+    <!-- your local css -->
+    <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+    <!-- <link rel="stylesheet" href="{{ '/assets/css/8sec.css' | relative_url }}"> -->
+    <!-- you can keep your SEO/meta in the page itself (index.html) to avoid more files -->
+    {{ content_for_head }}
+  </head>
+  <body>
+    {% include nav.html %}
+    <main role="main">
+      {{ content }}
+    </main>
+    {% include footer.html %}
+
+    <!-- optional external or local JS -->
+    {% if page.scripts %}
+      {{ page.scripts }}
+    {% endif %}
+    <!-- or, if you move your inline JS later:
+    <script src="{{ '/assets/js/main.js' | relative_url }}"></script> -->
+  </body>
+</html>

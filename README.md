@@ -1,1 +1,0 @@
-# qaztiel.github.io
