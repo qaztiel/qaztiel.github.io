@@ -1076,11 +1076,11 @@ iframe {
   .sandbox a.btn {
     color: white; }
   .sandbox .tabs {
-    display: flex;
     flex-direction: row;
     justify-content: space-between;
     max-width: 650px;
-    margin: 0 auto; }
+    margin: 0 auto;
+    height: 50px; }
     .sandbox .tabs a {
       text-align: center;
       justify-content: center;
