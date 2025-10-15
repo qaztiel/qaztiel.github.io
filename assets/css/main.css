@@ -3,21 +3,9 @@
 ---
 @font-face {
   font-family: 'roobert';
-  src: url("/marketing-assets/fonts/roobert/roobert_light.otf") format("opentype");
-  font-weight: 300;
-  font-style: normal;
-  font-stretch: normal; }
-@font-face {
-  font-family: 'roobert';
   src: url("/marketing-assets/fonts/roobert/roobert_lightitalic.otf") format("opentype");
   font-weight: 300;
   font-style: italic;
-  font-stretch: normal; }
-@font-face {
-  font-family: 'roobert';
-  src: url("/marketing-assets/fonts/roobert/roobert_regular.otf") format("opentype");
-  font-weight: 400;
-  font-style: normal;
   font-stretch: normal; }
 @font-face {
   font-family: 'roobert';
@@ -27,33 +15,9 @@
   font-stretch: normal; }
 @font-face {
   font-family: 'roobert';
-  src: url("/marketing-assets/fonts/roobert/roobert_medium.otf") format("opentype");
-  font-weight: 500;
-  font-style: normal;
-  font-stretch: normal; }
-@font-face {
-  font-family: 'roobert';
   src: url("/marketing-assets/fonts/roobert/roobert_mediumitalic.otf") format("opentype");
   font-weight: 500;
   font-style: italic;
-  font-stretch: normal; }
-@font-face {
-  font-family: 'roobert';
-  src: url("/marketing-assets/fonts/roobert/roobert_semibold.otf") format("opentype");
-  font-weight: 600;
-  font-style: normal;
-  font-stretch: normal; }
-@font-face {
-  font-family: 'roobert';
-  src: url("/marketing-assets/fonts/roobert/roobert_bold.otf") format("opentype");
-  font-weight: 700;
-  font-style: normal;
-  font-stretch: normal; }
-@font-face {
-  font-family: 'roobert';
-  src: url("/marketing-assets/fonts/roobert/roobert_heavy.otf") format("opentype");
-  font-weight: 800;
-  font-style: normal;
   font-stretch: normal; }
 html, body, input, textarea {
   font-family: 'roobert', sans-serif; }
