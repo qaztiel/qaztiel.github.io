@@ -61,6 +61,7 @@ a:hover {
 }
 .nav__links a {
   color: var(--8sec-text);
+  
 }
 .nav__links a:hover {
   color: var(--8sec-accent);

@@ -9,8 +9,6 @@ title: 8Sec - AppSec Consulting
 {% assign content_for_head = head %}
 
 {% include hero.html %}
-<!-- {% include why.html %} -->
 {% include services.html %}
 {% include contact.html %}
-<!-- {% include showcase.html %} -->
-<!-- {% include tools.html %} -->
+

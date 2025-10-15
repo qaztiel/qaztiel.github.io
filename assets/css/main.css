@@ -347,7 +347,7 @@ section.alt {
         display: flex;
         align-items: center;
         flex: 1;
-        justify-content: flex-start;
+        justify-content: flex-end;
         line-height: 1.5;
         font-weight: 400;
         font-size: 14px; }
