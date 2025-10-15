@@ -1,6 +1,6 @@
 ---
 layout: base
-title: 8Sec Application Security
+title: 8Sec - AppSec Consulting
 ---
 
 {% capture head %}
