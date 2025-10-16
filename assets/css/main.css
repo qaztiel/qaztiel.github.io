@@ -1,6 +1,44 @@
 ---
 
 ---
+/* structure */
+.nav__container { position: relative; }
+.nav__container .container2 { display:flex; align-items:center; justify-content:space-between; }
+
+/* desktop */
+#open-nav { display:none; }
+.nav__links { display:flex; gap:20px; align-items:center; }
+
+/* mobile */
+@media (max-width: 768px) {
+  #open-nav { display:inline-flex; align-items:center; }
+  .nav__links {
+    display:none;
+    position:absolute;
+    top:60px;             /* adjust to your header height */
+    right:16px;
+    left:auto;
+    width:min(280px, 90vw);
+    background:#0b0b0b;
+    border:1px solid rgba(255,255,255,.1);
+    border-radius:12px;
+    padding:12px 8px;
+    flex-direction:column;
+    gap:8px;
+    z-index:9999;
+  }
+  .nav__links a { display:block; padding:10px 12px; }
+  .nav__container.is-open .nav__links { display:flex; }
+
+  /* optional: lock scroll when open */
+  .nav-open { overflow:hidden; }
+}
+
+/* screen-reader only helper */
+.sr-only {
+  position:absolute; width:1px; height:1px; padding:0; margin:-1px;
+  overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0;
+}
 html, body, input, textarea {
   font-family: 'roobert', sans-serif; }
 
@@ -2531,3 +2569,6 @@ select, textarea, input[type="text"], input[type="password"], input[type="dateti
               padding: .3rem 0rem;
               align-items: center;
               display: flex; }
+
+
+              /* place hamburger in top-right corner */
