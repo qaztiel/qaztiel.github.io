@@ -2571,4 +2571,16 @@ select, textarea, input[type="text"], input[type="password"], input[type="dateti
               display: flex; }
 
 
-              /* place hamburger in top-right corner */
+/* --- Force mobile menu to appear top-right --- */
+@media (max-width: 1024px) {
+  .nav__container.is-open .nav__links,
+  .nav-open .nav__container .nav__links {
+    left: auto !important;     /* cancel out left:0 */
+    right: 0 !important;       /* anchor to right edge */
+    /* top: 60px !important;      adjust to your header height */
+    width: 220px;              /* optional - keeps it narrow */
+    border-radius: 10px;
+    text-align: right;
+  }
+}
+
