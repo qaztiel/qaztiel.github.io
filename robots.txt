@@ -1,3 +1,11 @@
 User-agent: *
 Allow: /
-Sitemap: https://8sec.com/sitemap.xml
+
+# Disallow internal or non-public paths
+Disallow: /admin/
+Disallow: /drafts/
+Disallow: /internal/
+Disallow: /private/
+
+# Point search engines to your XML sitemap
+Sitemap: https://eightsec.com/sitemap.xml
