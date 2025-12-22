@@ -1,84 +1,188 @@
 ---
-
+layout: default
 ---
 
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head data-proofer-ignore>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="8Sec offers AppSec-as-a-Service in Arizona — helping businesses secure their apps, cloud, and pipelines.">
-    <meta name="keywords" content="AppSec, application security, Arizona, Scottsdale, penetration testing, DevSecOps, 8Sec Consulting">
+<head>
+  <meta charset="UTF-8" />
+  <title>{{ page.title | default: site.title }}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  {% if site.description %}
+  <meta name="description" content="{{ site.description }}">
+  {% endif %}
+  <link rel="stylesheet" href="{{ "/assets/css/8sec.css" | relative_url }}">
+</head>
+<body>
+  <div class="page">
+    <header>
+      <nav class="nav">
+        <div class="brand">
+          <div class="brand-mark">8</div>
+          <div class="brand-text">{{ site.title | default: "8Sec Security" }}</div>
+        </div>
+        <div class="nav-links">
+          <a href="#services" class="nav-link">Services</a>
+          <a href="#approach" class="nav-link">Approach</a>
+          <a href="#about" class="nav-link">About</a>
+          <a href="#contact" class="nav-cta">Book a call</a>
+        </div>
+      </nav>
+    </header>
 
-    <title>{{ page.title | default: site.title }}</title>
+    <section class="hero">
+      <div class="hero-inner">
+        <div>
+          <div class="hero-eyebrow">Application security as a service</div>
+          <h1 class="hero-title">Application Security, delivered in seconds not quarters.</h1>
+          <p class="hero-sub">
+            8Sec plugs into your stack to design, automate, and operate AppSec so your teams can ship
+            fast and sleep at night.
+          </p>
+          <div class="hero-ctas">
+            <a href="#contact" class="btn-primary-link">Start a consultation</a>
+            <a href="#services" class="btn-ghost-link">View service catalog</a>
+          </div>
+          <p class="hero-footnote">
+            Focus: cloud native, SaaS, and API heavy environments across AWS and M365.
+          </p>
+        </div>
 
-    <!-- your local css -->
-    <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+        <div class="hero-visual" aria-hidden="true">
+          <div class="visual-inner">
+            <div class="visual-header">
+              <span>AppSec signal map</span>
+              <div class="dot-row">
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+              </div>
+            </div>
+            <div class="visual-matrix">
+              <div class="matrix-cell hot"></div>
+              <div class="matrix-cell"></div>
+              <div class="matrix-cell"></div>
+              <div class="matrix-cell hot"></div>
+              <div class="matrix-cell"></div>
 
-    <!-- favicon stuff -->
-    <link rel="apple-touch-icon" sizes="180x180" href="{{ '/assets/images/apple-touch-icon.png' | relative_url }}">
-    <link rel="icon" type="image/png" sizes="32x32" href="{{ '/assets/images/favicon-32x32.png' | relative_url }}">
-    <link rel="icon" type="image/png" sizes="16x16" href="{{ '/assets/images/favicon-16x16.png' | relative_url }}">
-    <link rel="manifest" href="{{ '/assets/images/site.webmanifest' | relative_url }}">
-    <link rel="shortcut icon" href="{{ '/assets/images/favicon.ico' | relative_url }}">
-    <meta name="theme-color" content="#ffffff">
-    <!-- <link rel="stylesheet" href="{{ '/assets/css/8sec.css' | relative_url }}"> -->
-    <!-- you can keep your SEO/meta in the page itself (index.html) to avoid more files -->
-    {{ content_for_head }}
-  </head>
-  <body>
-    {% include nav.html %}
-    <main role="main">
-      {{ content }}
+              <div class="matrix-cell"></div>
+              <div class="matrix-cell"></div>
+              <div class="matrix-cell hot"></div>
+              <div class="matrix-cell"></div>
+              <div class="matrix-cell"></div>
+
+              <div class="matrix-cell"></div>
+              <div class="matrix-cell hot"></div>
+              <div class="matrix-cell"></div>
+              <div class="matrix-cell"></div>
+              <div class="matrix-cell hot"></div>
+
+              <div class="matrix-cell"></div>
+              <div class="matrix-cell"></div>
+              <div class="matrix-cell"></div>
+              <div class="matrix-cell"></div>
+              <div class="matrix-cell"></div>
+
+              <div class="matrix-cell hot"></div>
+              <div class="matrix-cell"></div>
+              <div class="matrix-cell"></div>
+              <div class="matrix-cell"></div>
+              <div class="matrix-cell"></div>
+            </div>
+            <div class="visual-metrics">
+              <div class="metric-pill">
+                <span class="metric-dot"></span>
+                <span>98% faster triage</span>
+              </div>
+              <div class="metric-pill">
+                <span class="metric-dot"></span>
+                <span>Pipeline coverage live</span>
+              </div>
+              <div class="metric-pill">
+                <span class="metric-dot"></span>
+                <span>Threat model baseline</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <main>
+      <section id="services" class="section">
+        <div class="section-header">
+          <h2 class="section-title">Services in focus</h2>
+          <p class="section-sub">Pick the slice you need or bundle them into a program in a box.</p>
+        </div>
+        <div class="service-grid">
+          <article class="service-card">
+            <div class="service-icon">🧩</div>
+            <h3 class="service-title">AppSec program design</h3>
+            <p class="service-text">
+              Design a practical, measurable AppSec program aligned to how your teams actually build and ship.
+            </p>
+            <a href="/services/program-design" class="service-link">Explore program roadmap →</a>
+          </article>
+          <article class="service-card">
+            <div class="service-icon">🛡️</div>
+            <h3 class="service-title">Threat modeling & assessments</h3>
+            <p class="service-text">
+              Lightweight threat models, pentest support, and clear findings that engineers can act on in a sprint.
+            </p>
+            <a href="/services/threat-modeling" class="service-link">See assessment format →</a>
+          </article>
+          <article class="service-card">
+            <div class="service-icon">⚙️</div>
+            <h3 class="service-title">DevSecOps automation</h3>
+            <p class="service-text">
+              Wire SAST, SCA, IaC, secrets, and SBOM checks directly into your CI and ticketing flows.
+            </p>
+            <a href="/services/devsecops" class="service-link">View tool integrations →</a>
+          </article>
+        </div>
+      </section>
+
+      <section id="approach" class="section">
+        <div class="section-header">
+          <h2 class="section-title">Why 8Sec</h2>
+          <p class="section-sub">AppSec that behaves more like a product than a project.</p>
+        </div>
+        <div class="stats-row">
+          <div class="stat">
+            <div class="stat-value">98%</div>
+            <div class="stat-label">reduction in average time to first fix inside pilot teams.</div>
+          </div>
+          <div class="stat">
+            <div class="stat-value">14</div>
+            <div class="stat-label">days to a working AppSec pipeline in a typical cloud native stack.</div>
+          </div>
+          <div class="stat">
+            <div class="stat-value">24/7</div>
+            <div class="stat-label">async support for engineering leads and security owners.</div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="section">
+        <div class="cta-strip">
+          <div>
+            <div class="cta-strip-title">Ready for a security partner, not another tool?</div>
+            <div class="cta-strip-sub">
+              Share your stack and your top three security headaches. You’ll get a concrete plan, not a slide deck.
+            </div>
+          </div>
+          <a href="mailto:contact@eightsec.com" class="btn-primary-link">Schedule a call</a>
+        </div>
+      </section>
     </main>
-    {% include footer.html %}
 
-    <!-- optional external or local JS -->
-    {% if page.scripts %}
-      {{ page.scripts }}
-    {% endif %}
-    <!-- or, if you move your inline JS later:
-    <script src="{{ '/assets/js/main.js' | relative_url }}"></script> -->
-    <script>
-      (function () {
-        const nav = document.getElementById('nav__container');
-        const toggle = document.getElementById('open-nav');
-        const menu = document.getElementById('primary-nav');
-
-        function openNav() {
-          nav.classList.add('is-open');
-          document.documentElement.classList.add('nav-open');
-          toggle.setAttribute('aria-expanded', 'true');
-          menu.setAttribute('aria-hidden', 'false');
-        }
-        function closeNav() {
-          nav.classList.remove('is-open');
-          document.documentElement.classList.remove('nav-open');
-          toggle.setAttribute('aria-expanded', 'false');
-          menu.setAttribute('aria-hidden', 'true');
-        }
-
-        toggle.addEventListener('click', function (e) {
-          e.preventDefault();
-          nav.classList.contains('is-open') ? closeNav() : openNav();
-        });
-
-        // click outside to close
-        document.addEventListener('click', function (e) {
-          if (!nav.classList.contains('is-open')) return;
-          if (!nav.contains(e.target)) closeNav();
-        });
-
-        // Esc to close
-        document.addEventListener('keydown', function (e) {
-          if (e.key === 'Escape') closeNav();
-        });
-
-        // close after clicking a link (mobile)
-        menu.addEventListener('click', function (e) {
-          if (e.target.tagName === 'A') closeNav();
-        });
-      })();
-    </script>
-  </body>
+    <footer>
+      <div class="footer-inner">
+        <span>© {{ site.title | default: "8Sec Security" }}</span>
+        <span>{{ site.email | default: "contact@eightsec.com" }}</span>
+      </div>
+    </footer>
+  </div>
+</body>
 </html>
