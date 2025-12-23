@@ -1,5 +1,22 @@
-_site
-.sass-cache
-.jekyll-cache
-.jekyll-metadata
-vendor
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Editor junk
+.vscode/
+.idea/
+*.swp
+
+# Logs
+*.log
+
+# Node / tooling (future-proof)
+node_modules/
+
+# Python / local servers
+__pycache__/
+*.pyc
+
+# Build artifacts (if added later)
+dist/
+build/
