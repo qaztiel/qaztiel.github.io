@@ -63,7 +63,7 @@ header{
   display:flex; align-items:center; justify-content:space-between;
   gap:14px;
 }
-.brand{display:flex; align-items:center; gap:10px; min-width:200px}
+.brand{display:flex; align-items:center; gap:10px; min-width:auto}
 .brand img{width:34px; height:34px; object-fit:contain}
 .brand-text{
   display:flex; flex-direction:column; gap:2px;
@@ -79,7 +79,7 @@ header{
   font-size:11px;
   color: var(--muted);
 }
-.nav-links{
+.nav-links{margin-left:auto;
   display:flex; align-items:center; gap:16px;
   font-size:13px;
 }
@@ -113,16 +113,38 @@ header{
   color: var(--text);
 }
 .icon-btn:hover{border-color: var(--border-strong); transform: translateY(-1px)}
+
+/* THEME SWITCH */
+.theme-switch{display:inline-flex;align-items:center;cursor:pointer}
+.theme-switch input{position:absolute;opacity:0;width:1px;height:1px}
+.theme-switch .track{
+  width:44px;height:26px;border-radius:999px;
+  border:1px solid var(--border);
+  background: rgba(0,0,0,0.10);
+  display:inline-flex;align-items:center;padding:3px;
+  transition: background var(--transition), border-color var(--transition);
+}
+.theme-switch .thumb{
+  width:20px;height:20px;border-radius:999px;
+  background: var(--text);
+  transition: transform var(--transition), background var(--transition);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+}
+html[data-theme="dark"] .theme-switch .track{background: rgba(30,58,138,0.35); border-color: var(--border-strong)}
+html[data-theme="dark"] .theme-switch .thumb{transform: translateX(18px); background: #F9FAFB}
+html[data-theme="light"] .theme-switch .track{background: rgba(185,28,28,0.10); border-color: var(--border-strong)}
+html[data-theme="light"] .theme-switch .thumb{transform: translateX(0); background: #0B1220}
+
 .hamburger{display:none}
 
 /* MOBILE MENU */
-.mobile-drawer{
+.mobile-drawer{z-index:100;
   position:fixed; inset:0;
   background: rgba(2,6,23,0.62);
   display:none;
 }
 .mobile-drawer.open{display:block}
-.drawer-panel{
+.drawer-panel{z-index:101;
   position:absolute; right:12px; top:12px;
   width:min(360px, calc(100% - 24px));
   background: var(--panel);
@@ -282,7 +304,7 @@ main{padding: 6px 18px 40px; flex:1}
 
 /* CONTACT */
 .contact-grid{
-  display:grid; grid-template-columns: 1.3fr 1fr; gap:14px;
+  display:grid; grid-template-columns: minmax(0,1fr); gap:14px;
 }
 .contact-card{
   background: var(--panel);
@@ -342,6 +364,12 @@ footer{
   .contact-ways{grid-template-columns:minmax(0,1fr)}
 }
 @media (max-width: 880px){
-  .nav-links{display:none}
+  .nav-links{margin-left:auto;display:none}
   .hamburger{display:inline-flex}
+}
+
+/* Logo visibility on light theme */
+html[data-theme="light"] .brand img,
+html[data-theme="light"] .drawer-panel img{
+  filter: invert(1) contrast(1.05);
 }

@@ -5,21 +5,21 @@
   const initial = stored || (prefersDark ? "dark" : "dark"); // default dark for brand
   root.setAttribute("data-theme", initial);
 
-  const themeBtn = document.getElementById("themeToggle");
-  function setTheme(next){
+  const themeInput = document.getElementById("themeToggle");
+
+  function applyTheme(next){
     root.setAttribute("data-theme", next);
     localStorage.setItem("theme", next);
-    if(themeBtn){
-      themeBtn.setAttribute("aria-pressed", next === "dark" ? "true" : "false");
-      themeBtn.title = next === "dark" ? "Switch to light" : "Switch to dark";
-      themeBtn.innerText = next === "dark" ? "☀️" : "🌙";
+    if(themeInput){
+      // checked = dark
+      themeInput.checked = (next === "dark");
     }
   }
-  if(themeBtn){
-    setTheme(root.getAttribute("data-theme"));
-    themeBtn.addEventListener("click", ()=>{
-      const cur = root.getAttribute("data-theme");
-      setTheme(cur === "dark" ? "light" : "dark");
+
+  if(themeInput){
+    applyTheme(root.getAttribute("data-theme"));
+    themeInput.addEventListener("change", ()=>{
+      applyTheme(themeInput.checked ? "dark" : "light");
     });
   }
 
@@ -38,9 +38,14 @@
     drawer.classList.remove("open");
     drawer.setAttribute("aria-hidden","true");
   }
+  function toggleDrawer(){
+    if(!drawer) return;
+    drawer.classList.contains("open") ? closeDrawer() : openDrawer();
+  }
 
-  if(openBtn) openBtn.addEventListener("click", openDrawer);
+  if(openBtn) openBtn.addEventListener("click", toggleDrawer);
   if(closeBtn) closeBtn.addEventListener("click", closeDrawer);
+
   if(drawer){
     drawer.addEventListener("click", (e)=>{
       if(e.target === drawer) closeDrawer();
