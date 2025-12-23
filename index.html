@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <title>8Sec Consulting LLC | AppSec as a Service</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="8Sec Consulting LLC provides Application Security as a Service and DevSecOps automation for SaaS and API-heavy teams." />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="stylesheet" href="/assets/css/site.css" />
+</head>
+<body>
+  <div class="page">
+
+    <header>
+      <nav class="nav" aria-label="Primary navigation">
+        <a class="brand" href="#top" aria-label="8Sec home">
+          <img src="/assets/img/8sec-icon.png" alt="8Sec logo mark" />
+          <div class="brand-text">
+            <div class="brand-name">8Sec Consulting LLC</div>
+            <div class="brand-tag">AppSec as a Service</div>
+          </div>
+        </a>
+
+        <div class="nav-links">
+          <a href="#services" class="nav-link">Services</a>
+          <a href="#pricing" class="nav-link">Pricing</a>
+          <a href="#outcomes" class="nav-link">Outcomes</a>
+          <a href="#contact" class="nav-link">Contact</a>
+        </div>
+
+        <div class="nav-actions">
+          <button id="themeToggle" class="icon-btn" aria-label="Toggle dark/light mode" aria-pressed="true" title="Switch to light">☀️</button>
+          <a class="btn btn-primary" href="https://calendar.app.google/74TkFWgQ5RPgwPgm6" target="_blank" rel="noopener">Get Started</a>
+          <button id="menuOpen" class="icon-btn hamburger" aria-label="Open menu" title="Menu">☰</button>
+        </div>
+      </nav>
+    </header>
+
+    <!-- MOBILE DRAWER -->
+    <div id="mobileDrawer" class="mobile-drawer" aria-hidden="true">
+      <div class="drawer-panel" role="dialog" aria-label="Menu">
+        <div class="drawer-header">
+          <div style="display:flex;align-items:center;gap:10px">
+            <img src="/assets/img/8sec-icon.png" alt="" style="width:26px;height:26px;object-fit:contain" />
+            <div style="font-weight:800">8Sec</div>
+          </div>
+          <button id="menuClose" class="icon-btn" aria-label="Close menu" title="Close">✕</button>
+        </div>
+        <div class="drawer-links">
+          <a href="#services">Services</a>
+          <a href="#pricing">Pricing</a>
+          <a href="#outcomes">Outcomes</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <div class="drawer-actions">
+          <a class="btn btn-primary" href="https://calendar.app.google/74TkFWgQ5RPgwPgm6" target="_blank" rel="noopener">Get Started</a>
+          <a class="btn" href="mailto:8sec.consulting@gmail.com?subject=8Sec%20Discovery%20Call">Email</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- HERO -->
+    <section id="top" class="hero">
+      <div class="hero-inner">
+        <div>
+          <div class="eyebrow">AppSec it once. Trust it always.</div>
+          <h1 class="h1">Application Security as a Service that stays out of your engineers’ way.</h1>
+          <p class="sub">
+            8Sec runs your AppSec program end-to-end: triage, threat modeling, pipeline automation, backlog reduction,
+            and sprint-aligned support. You get a predictable subscription, not a pile of reports.
+          </p>
+          <div class="ctas">
+            <a class="btn btn-primary" href="https://calendar.app.google/74TkFWgQ5RPgwPgm6" target="_blank" rel="noopener">Schedule a call</a>
+            <a class="btn" href="#pricing">View pricing</a>
+          </div>
+          <div class="note">Focused on SaaS + API-heavy product orgs using AWS, M365, GitHub/GitLab, and modern CI/CD.</div>
+          <div class="badges">
+            <span class="badge">AppSec-as-a-Service</span>
+            <span class="badge">DevSecOps automation</span>
+            <span class="badge">Backlog reduction</span>
+            <span class="badge">Veteran-owned</span>
+          </div>
+        </div>
+
+        <div class="hero-visual" aria-hidden="true">
+          <div class="visual-inner">
+            <div class="visual-top">
+              <span>Signal overview</span>
+              <span class="dots"><span class="dot"></span><span class="dot"></span><span class="dot"></span></span>
+            </div>
+            <div class="matrix">
+              <div class="cell hot"></div><div class="cell"></div><div class="cell"></div><div class="cell hot"></div><div class="cell"></div>
+              <div class="cell"></div><div class="cell"></div><div class="cell hot"></div><div class="cell"></div><div class="cell"></div>
+              <div class="cell"></div><div class="cell hot"></div><div class="cell"></div><div class="cell"></div><div class="cell hot"></div>
+              <div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div>
+              <div class="cell hot"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div>
+            </div>
+            <div class="pills">
+              <div class="pill"><span class="pip"></span>310 backlog issues closed</div>
+              <div class="pill"><span class="pip"></span>98% faster triage</div>
+              <div class="pill"><span class="pip"></span>43 repos with live checks</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <main>
+
+      <!-- SERVICES -->
+      <section id="services" class="section">
+        <div class="section-head">
+          <h2 class="h2">Services in focus</h2>
+          <p class="lead">Two core offerings: AppSec-as-a-Service (primary) and Automation (accelerator).</p>
+        </div>
+
+        <div class="grid-3">
+          <article class="card">
+            <div class="kicker">Core subscription</div>
+            <h3>AppSec as a Service</h3>
+            <p>
+              Ongoing AppSec ownership: triage, ticket quality, threat modeling, security reviews, backlog reduction,
+              dashboards, and sprint support. You get cadence and coverage without staffing a full AppSec team.
+            </p>
+            <a href="#pricing">See subscription tiers →</a>
+          </article>
+
+          <article class="card">
+            <div class="kicker">Automation</div>
+            <h3>DevSecOps automation</h3>
+            <p>
+              CI/CD integrations for SAST, SCA, secrets, IaC, and SBOM signals. We tune noise at the source and convert
+              findings into actionable engineering work (not alert fatigue).
+            </p>
+            <a href="#pricing">See automation options →</a>
+          </article>
+
+          <article class="card">
+            <div class="kicker">Foundation</div>
+            <h3>90-day AppSec roadmap</h3>
+            <p>
+              Start with a clean baseline and a practical plan. You’ll leave with a prioritized roadmap, quick wins,
+              and the first 90 days mapped to measurable outcomes.
+            </p>
+            <a href="#contact">Start with a roadmap →</a>
+          </article>
+        </div>
+      </section>
+
+      <!-- PRICING -->
+      <section id="pricing" class="section">
+        <div class="section-head">
+          <h2 class="h2">Pricing</h2>
+          <p class="lead">Public and simple. Final scope depends on repo count, CI/CD complexity, and automation coverage.</p>
+        </div>
+
+        <div class="grid-3">
+          <article class="card">
+            <div class="kicker">Starter <span class="tag">Best for small teams</span></div>
+            <h3>AppSec as a Service</h3>
+            <div class="price"><strong>$4k–$6k</strong><span>/ month</span></div>
+            <ul class="ul">
+              <li>• Triage + ticket quality</li>
+              <li>• Baseline threat model + quick wins</li>
+              <li>• CI signal setup for key repos</li>
+              <li>• Monthly reporting + roadmap updates</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <div class="kicker">Growth <span class="tag">Most common</span></div>
+            <h3>AppSec as a Service</h3>
+            <div class="price"><strong>$7k–$10k</strong><span>/ month</span></div>
+            <ul class="ul">
+              <li>• Expanded repo coverage</li>
+              <li>• Sprint-aligned reviews + advisory</li>
+              <li>• Backlog reduction program</li>
+              <li>• Dashboards + KPI tracking</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <div class="kicker">Scale <span class="tag">Automation heavy</span></div>
+            <h3>AppSec as a Service</h3>
+            <div class="price"><strong>$12k–$16k</strong><span>/ month</span></div>
+            <ul class="ul">
+              <li>• Full CI coverage + tuning</li>
+              <li>• Multi-team backlog reduction</li>
+              <li>• Program governance + KPIs</li>
+              <li>• Optional on-call support patterns</li>
+            </ul>
+          </article>
+        </div>
+
+        <div style="margin-top:12px" class="lead">
+          <b>Automation add-on:</b> scoped per environment. Typical buildouts start at <b>$2,500+</b> depending on toolchain and workflows.
+        </div>
+      </section>
+
+      <!-- OUTCOMES -->
+      <section id="outcomes" class="section">
+        <div class="section-head">
+          <h2 class="h2">Outcomes we optimize for</h2>
+          <p class="lead">Less chaos. More control. Faster fixes. Evidence you can show leadership.</p>
+        </div>
+
+        <div class="grid-3">
+          <article class="card">
+            <div class="kicker">Speed</div>
+            <h3>Faster time-to-first-fix</h3>
+            <p>Better triage, better tickets, fewer duplicates, and CI signals that map directly to engineering work.</p>
+            <a href="#contact">Ask for a sample workflow →</a>
+          </article>
+          <article class="card">
+            <div class="kicker">Signal</div>
+            <h3>Noise reduction</h3>
+            <p>Tuned alerts with deduplication and severity logic that engineers trust, not ignore.</p>
+            <a href="#contact">See a dashboard example →</a>
+          </article>
+          <article class="card">
+            <div class="kicker">Confidence</div>
+            <h3>Release with proof</h3>
+            <p>Dashboards and reporting that demonstrate coverage, risk, and progress across repos and teams.</p>
+            <a href="#pricing">Start with a tier →</a>
+          </article>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section id="contact" class="section">
+        <div class="section-head">
+          <h2 class="h2">Ready to get started?</h2>
+          <p class="lead">Pick the fastest path. You’ll get a concrete plan, not a generic deck.</p>
+        </div>
+
+        <div class="contact-grid">
+          <div class="contact-card">
+            <h3>Contact 8Sec</h3>
+            <p>Tell us your stack, repo count, and your top three AppSec headaches. We’ll respond with next steps and a scoped recommendation.</p>
+
+            <div class="contact-ways">
+              <div class="way">
+                <b>Email</b>
+                <a href="mailto:8sec.consulting@gmail.com?subject=8Sec%20Discovery%20Request">8sec.consulting@gmail.com</a>
+                <small>Best for details and scope</small>
+              </div>
+              <div class="way">
+                <b>Schedule</b>
+                <a href="https://calendar.app.google/74TkFWgQ5RPgwPgm6" target="_blank" rel="noopener">Google Booking Link</a>
+                <small>30 minute discovery call</small>
+              </div>
+              <div class="way">
+                <b>Phone</b>
+                <a href="tel:+14808520676">(480) 852-0676</a>
+                <small>Call or text</small>
+              </div>
+              <div class="way">
+                <b>Quick start</b>
+                <a href="#pricing">Choose a tier</a>
+                <small>Starter, Growth, or Scale</small>
+              </div>
+            </div>
+          </div>
+
+          <div class="cta-strip">
+            <div>
+              <h3>AppSec it once. Trust it always.</h3>
+              <p>Book a call and we’ll map your first 30 days: triage, automation, backlog reduction, and reporting cadence.</p>
+            </div>
+            <a class="btn btn-primary" href="https://calendar.app.google/74TkFWgQ5RPgwPgm6" target="_blank" rel="noopener">Book</a>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <footer>
+      <div class="footer-left">
+        <span>© 8Sec Consulting LLC</span>
+        <span class="footer-badge">Veteran-owned business</span>
+      </div>
+      <div>
+        <span>8sec.consulting@gmail.com</span>
+        <span> · </span>
+        <span>(480) 852-0676</span>
+      </div>
+    </footer>
+
+  </div>
+
+  <script src="/assets/js/site.js"></script>
+</body>
+</html>
